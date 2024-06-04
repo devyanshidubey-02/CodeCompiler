@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Compiler</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 100vh;
+        }
+        #editor, #output {
+            width: 45%;
+            height: 80%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            overflow: auto;
+        }
+        #output {
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <div id="editor">
+        <textarea id="code" rows="10" cols="50">Enter your HTML code here...</textarea>
+        <button onclick="compileHTML()">Compile</button>
+    </div>
+    <div id="output"></div>
+
+    <script>
+        function compileHTML() {
+            const code = document.getElementById('code').value;
+            const outputDiv = document.getElementById('output');
+            outputDiv.innerHTML = code;
+        }
+    </script>
+</body>
+</html>
